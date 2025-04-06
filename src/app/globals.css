@@ -1,0 +1,73 @@
+/* src/app/globals.css */ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+:root {
+  --primary: #1e40af;
+  --secondary: #3b82f6;
+  --accent: #60a5fa;
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px var(--accent));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px var(--accent));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px var(--accent));
+  }
+}
+
+.glow-effect {
+  animation: glow 3s infinite;
+}
+
+/* For parallax sections */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card hover effects */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
